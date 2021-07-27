@@ -1,0 +1,30 @@
+nav {
+    height: 50px;
+    display: flex;
+    width: 100%;
+    background-color: #018786;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.burger {
+    padding: 0px 14px;
+}
+
+.search {
+    display: flex;
+    flex-basis: 65%;
+    padding: 0px 0px 0px 5px;
+}
+
+.signin-button {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 0px 16px;
+}
