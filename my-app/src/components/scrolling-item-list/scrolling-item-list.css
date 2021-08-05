@@ -1,0 +1,13 @@
+.movie-list__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__button {
+    font-size: 0.75rem;
+}
+
+.movie-card-list {
+    display: flex;
+    overflow: auto;
+}

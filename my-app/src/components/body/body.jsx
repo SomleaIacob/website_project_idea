@@ -1,6 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import './body.css';
+import ScrollingItemList from '../scrolling-item-list/scrolling-item-list';
+import TheMask from '../../img/themasklarge.jpg';
+import DumbDumber from '../../img/dumbanddumberlarge.jpg'
+import TheTrumanshow from '../../img/thetrumanshowlarge.jpg'
 
 function Body(){
     return (
@@ -9,7 +13,7 @@ function Body(){
   <Carousel.Item>
     <img
       className="d-block w-100 h-100"
-      src="../../img/47aaa4df05f4907b3fa6cc871638289f.jpg"
+      src={TheMask}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -20,7 +24,7 @@ function Body(){
   <Carousel.Item>
     <img
       className="d-block w-100 h-100"
-      src="../../img/show-truman-wallpaper-preview.jpg"
+      src={DumbDumber}
       alt="Second slide"
     />
 
@@ -32,7 +36,7 @@ function Body(){
   <Carousel.Item>
     <img
       className="d-block w-100 h-100"
-      src="../../img/comedy-dumb-dumber-family-wallpaper-thumb.jpg"
+      src={TheTrumanshow}
       alt="Third slide"
     />
 
@@ -42,8 +46,14 @@ function Body(){
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+
+<ScrollingItemList title="Popular Movies"></ScrollingItemList>
+
+<ScrollingItemList title="Newest Movies"></ScrollingItemList>
     </>
         ) 
 }
+
+
 
 export default Body;
