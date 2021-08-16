@@ -1,14 +1,20 @@
 import './App.css';
 import Nav from './components/nav/nav';
-import Body from './components/body/body';
+import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Signup from './pages/signup';
+import { Route } from 'react-router-dom';
 
-
-function App() {
+function App(){
   return (
     <div className="App">
     <Nav></Nav>
-      <Body></Body>
+      <Route path='/Home' >
+        <Home></Home>
+      </Route>
+      <Route path='/signup'>
+        <Signup></Signup>
+      </Route>
     </div>
   );
 }
