@@ -14,10 +14,10 @@ function Nav(props) {
                     </button>
                 </div>
                 <div>
-                    <Link to='/signup' >
+                    <Link to='/login' >
                         <button className="signin-button">
                             <div>
-                                Sign In
+                                Log in
                             </div>
                         </button>
                     </Link>

@@ -1,6 +1,8 @@
-function Signup() {
+import { withRouter } from "react-router";
+
+function Signup(props) {
     
-    const API_PATH = "http://localhost:3000/my-app/api/signup.php"
+    const API_PATH = "http://localhost/myapp/api/signup.php"
     let userName ="";
     let email ="";
     let password ="";
@@ -26,21 +28,25 @@ function Signup() {
         event.preventDefault();
         fetch(API_PATH,{
           method: 'post',
-          headers: {'Content-Type': 'application/json'},
-          body: {
+          //mode: 'no-cors', // no-cors, *cors, same-origin
+          headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+          body: JSON.stringify({
             userName: userName,
             email: email,
             password: password
-          }
+           })
         })
         .then(response => {
           if (!response.ok) {
+            debugger
             throw new Error("something went wrong");
+
           }
           return response.json();
         })
         .then(data => {
-          alert("Ai reusit!");
+          //alert("Ai reusit!");
+          props.history.push('/');
         })
         .catch(error => {
           console.error(error);
@@ -106,4 +112,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default withRouter(Signup);
