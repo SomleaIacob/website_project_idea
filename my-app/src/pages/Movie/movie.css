@@ -1,0 +1,12 @@
+.movie-genres {
+    gap: 0.5rem;
+}
+
+.movie-poster {
+    left: 8%;
+    top: 35%;
+}
+
+.movie-poster > img {
+    width: 6.5rem;
+}

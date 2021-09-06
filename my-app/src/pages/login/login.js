@@ -86,7 +86,7 @@ function Login(props) {
 }
 
 Login.propTypes = {
-    setUser: PropTypes.element.isRequired
+    setUser: PropTypes.func.isRequired
 };
 
 export default withRouter(Login);

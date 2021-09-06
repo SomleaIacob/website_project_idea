@@ -1,4 +1,6 @@
 import { withRouter } from "react-router";
+import PropTypes from 'prop-types';
+
 
 function Signup(props) {
     
@@ -46,6 +48,7 @@ function Signup(props) {
         })
         .then(data => {
           //alert("Ai reusit!");
+          props.setUser(userName);
           props.history.push('/');
         })
         .catch(error => {
@@ -110,6 +113,10 @@ function Signup(props) {
       </button>
     </form>
   );
+}
+
+Signup.propTypes={
+  setUser: PropTypes.func.isRequired
 }
 
 export default withRouter(Signup);

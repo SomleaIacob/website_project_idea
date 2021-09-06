@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+  break-word: break-word;
+}
