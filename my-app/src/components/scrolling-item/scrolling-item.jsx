@@ -5,7 +5,7 @@ function ScrollingItem(props) {
   return (
     <>
       <div className="movie-card">
-        <Link className="link" to="/movie">
+        <Link className="link" to={`/movie/${props.movieId}`}>
           <div className="movie-card__img">
             <img src={props.icon} alt="" />
           </div>

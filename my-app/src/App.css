@@ -2,6 +2,22 @@
   text-align: center;
 } */
 
+.App {
+  background-color: #efefef;
+  margin: auto;
+  height: 100%;
+}
+
+#root {
+  background-color: #707070;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +52,21 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 767px) {
+  .App {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .App {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .App {
+    width: 29%;
+  }
+} 

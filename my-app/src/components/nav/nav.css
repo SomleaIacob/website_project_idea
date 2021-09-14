@@ -2,8 +2,12 @@ nav {
     height: 50px;
     display: flex;
     width: 100%;
-    background-color: #018786;
+    background-color: #8d8d8d;
     align-items: center;
+}
+
+.signin-button {
+    width: 81px;
 }
 
 button {
@@ -18,7 +22,7 @@ button {
 
 .search {
     display: flex;
-    flex-basis: 65%;
+    flex-basis: 62%;
     padding: 0px 0px 0px 5px;
 }
 
@@ -28,3 +32,20 @@ button {
     justify-content: flex-end;
     padding: 0px 16px;
 }
+
+@media screen and (min-width: 580px) {
+    .search {
+      flex-basis: 75%;
+    }
+  }
+
+@media screen and (min-width: 767px) {
+    .search {
+      flex-basis: 69%;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .search {
+      flex-basis: 76%;
+    }
+  } 

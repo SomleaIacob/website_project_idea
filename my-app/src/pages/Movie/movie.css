@@ -1,3 +1,16 @@
+.movie-title {
+    color: #5a9216;
+}
+
+.movie-header {
+    background-color: #bdbdbd;
+}
+
+.movie-wallpaper {
+    border: 3px solid black;
+    box-shadow: inset 10px 30px black;
+}
+
 .movie-genres {
     gap: 0.5rem;
 }
@@ -9,4 +22,9 @@
 
 .movie-poster > img {
     width: 6.5rem;
+}
+
+.btn-success {
+    background-color: #8bc34a !important;
+    border-color:  #8bc34a !important;
 }

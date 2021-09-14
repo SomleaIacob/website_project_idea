@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import './App.css';
 import Nav from './components/nav/nav';
 import Home from './pages/Home/Home';
@@ -8,6 +7,7 @@ import { Route } from 'react-router-dom';
 import Login from './pages/Login/login';
 import useUser from './useUser';
 import Movie from './pages/Movie/movie'
+import Bio from './pages/Bio/bio'
 
 
 function App(){
@@ -24,8 +24,17 @@ function App(){
       <Route path='/login'>
         <Login setUser={setUser}></Login>
       </Route>
-      <Route path='/movie'>
+      <Route path='/movie/:id'>
         <Movie></Movie>
+      </Route>
+      <Route path='/director/:id'>
+        <Bio></Bio>
+      </Route>
+      <Route path='/writer/:id'>
+        <Bio></Bio>
+      </Route>
+      <Route path='/actor/:id'>
+        <Bio></Bio>
       </Route>
     </div>
   );

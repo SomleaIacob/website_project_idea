@@ -1,30 +1,29 @@
 import "./nav.css";
 import { Link, withRouter } from "react-router-dom";
 import PropsTypes from "prop-types";
-
+import Button from "react-bootstrap/Button";
 
 function Nav(props) {
   let button;
-  function logout (){
+  function logout() {
     props.setUser(null);
-    props.history.push('/');
+    props.history.push("/");
   }
   if (!props.user) {
     button = (
       <Link to="/login">
-        <button className="signin-button">
-          <div>Log in</div>
-        </button>
+        <Button variant="success" className="signin-button">
+          Log in
+        </Button>
       </Link>
     );
-  }else {
-      button = (
-          <button className="signin-button" onClick={logout}>
-            <div>Log out</div>
-          </button>
-      );
+  } else {
+    button = (
+      <Button variant="success" className="signin-button" onClick={logout}>
+        Log out
+      </Button>
+    );
   }
-  
 
   return (
     <header>
@@ -55,9 +54,7 @@ function Nav(props) {
             </svg>
           </button>
         </div>
-        <div>
-            {button}
-        </div>
+        <div>{button}</div>
       </nav>
     </header>
   );
@@ -65,7 +62,7 @@ function Nav(props) {
 
 Nav.propTypes = {
   user: PropsTypes.string.isRequired,
-  setUser: PropsTypes.func.isRequired
+  setUser: PropsTypes.func.isRequired,
 };
 
 export default withRouter(Nav);
